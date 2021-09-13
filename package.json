@@ -38,7 +38,7 @@
     "generate:changelog": "babel-node ./scripts/generateChangelog.js --presets @babel/env",
     "README-vue": "We are trying to install a package from a branch so we have to manually build it. First clean out all the packages we don't want.",
     "preinstall": "rm -rf packages/lucide-angular packages/lucide-figma packages/lucide-flutter packages/lucide-preact packages/lucide-react packages/lucide-vue-next",
-    "postinstall": "npm install --production=false; cd packages/lucide-vue && npm run build"
+    "postinstall": "cd packages/lucide-vue && npm install && npm run build"
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.25.2",
