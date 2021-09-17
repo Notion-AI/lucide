@@ -1,5 +1,23 @@
 <p align=center><img width="410" src="https://lucide.dev/logo-text.svg" alt="Lucide Logo"></p>
 
+# Build new icons for Notion
+
+```shell
+$ git clone git@github.com:Notion-Ai/lucide.git
+$ cd lucide
+$ git checkout -b feature/icon-[name]
+$ git commit -m "New icon [name]"
+$ git push [...]
+$ git checkout dist
+$ git merge feature/icon-[name]
+$ yarn && yarn lucide-vue build
+$ git add .
+$ git commit
+$ git push
+$ cd ../frontend-notionai
+$ npm install
+```
+
 # Lucide
 
 ![NPM](https://img.shields.io/npm/l/lucide)

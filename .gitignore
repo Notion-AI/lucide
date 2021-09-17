@@ -11,3 +11,4 @@ stats
 *.log
 packages/**/src/icons/*.js
 packages/**/src/icons/*.ts
+!packages/lucide-vue/dist
