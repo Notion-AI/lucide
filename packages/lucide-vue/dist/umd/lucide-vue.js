@@ -175,7 +175,8 @@
             height: size,
             stroke: color,
             'stroke-width': strokeWidth
-          }, data.attrs)
+          }, data.attrs),
+          on: (data === null || data === void 0 ? void 0 : data.on) || {}
         }, iconNode.map(function (_ref2) {
           var _ref3 = _slicedToArray(_ref2, 2),
               tag = _ref3[0],
