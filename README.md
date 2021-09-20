@@ -10,11 +10,23 @@ $ git commit -m "New icon [name]"
 $ git push [...]
 $ git checkout dist
 $ git merge feature/icon-[name]
-$ yarn && yarn lucide-vue build
+$ rm -rf packages/lucide-angular \
+    packages/lucide-figma \
+    packages/lucide-flutter \
+    packages/lucide-preact \
+    packages/lucide-react \
+    packages/lucide-vue-next
+$ nvm use 14 && npm install
+$ yarn && yarn workspace lucide-vue build
 $ git add .
 $ git commit
 $ git push
+$ git rev-parse HEAD
 $ cd ../frontend-notionai
+```
+
+Update `frontend-notionai/app/package.json` with SHA from the commit to `dist`.
+```
 $ npm install
 ```
 
